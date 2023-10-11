@@ -23,7 +23,7 @@ const PlatformSelector = ({ selectedPlatform, onSelectPlatform }: Props) => {
     <>
       <Menu>
         <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-          {selectedPlatform === null ? "Platforms" : selectedPlatform?.name}
+          {selectedPlatform?.name || "Platforms"}
         </MenuButton>
         <MenuList>
           {isLoading && <Spinner />}
